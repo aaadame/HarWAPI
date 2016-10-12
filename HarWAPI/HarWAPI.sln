@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarWAPI", "HarWAPI\HarWAPI.csproj", "{D298E139-83C9-4E5E-A06C-EA6C6E08F507}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarWAPI.Tests", "HarWAPI.Tests\HarWAPI.Tests.csproj", "{33E6BF37-4EC6-4C13-A497-C2A5E4CC8C27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpArchive", "HarStore\HttpArchive.csproj", "{2AF67078-E89A-46C0-AB96-22BD70E842CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D298E139-83C9-4E5E-A06C-EA6C6E08F507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D298E139-83C9-4E5E-A06C-EA6C6E08F507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D298E139-83C9-4E5E-A06C-EA6C6E08F507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D298E139-83C9-4E5E-A06C-EA6C6E08F507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E6BF37-4EC6-4C13-A497-C2A5E4CC8C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E6BF37-4EC6-4C13-A497-C2A5E4CC8C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E6BF37-4EC6-4C13-A497-C2A5E4CC8C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E6BF37-4EC6-4C13-A497-C2A5E4CC8C27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF67078-E89A-46C0-AB96-22BD70E842CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF67078-E89A-46C0-AB96-22BD70E842CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF67078-E89A-46C0-AB96-22BD70E842CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF67078-E89A-46C0-AB96-22BD70E842CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
