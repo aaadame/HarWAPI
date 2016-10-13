@@ -12,21 +12,15 @@ using HttpArchive;
 namespace HarWAPI.Controllers
 {
     //[Authorize]
-    public class HarController : ApiController
+    public class HarController : BaseHarController
     {
 
-        static IHarRepository repository;
 
-        public HarController()
-        {
-            if (repository == null)
-                { repository = new HarRepository(); }
-        }
+        public HarController() : base() { }
 
-        public HarController(IHarRepository harrepository)
-        {
-            repository = harrepository;
-        }
+
+        public HarController(IHarRepository harrepository) : base(harrepository) { }
+
 
         /// <summary>
         /// Read all
@@ -77,7 +71,7 @@ namespace HarWAPI.Controllers
 
         }
 
-        //public HttpResponseMessage Post([FromBody] Har item)
+        //public HttpResponseMessage Post([FromBody] HarEntity item)
         //{
 
         //    item = repository.Add(item);
@@ -121,36 +115,6 @@ namespace HarWAPI.Controllers
 
             repository.Remove(id);
         }
-
-        /// <summary>
-        /// Gets the har requests.
-        /// </summary>
-        /// <param name="id">The identifier.</param>
-        /// <returns></returns>
-        /// <exception cref="HttpResponseException"></exception>
-        //[HttpGet, ActionName("HarRequests")]
-        //public IEnumerable<Request> GetRequests(int id)
-        //{
-
-        //    var harreq = (from req in repository.GetRequests(id)
-        //                  select new Request
-        //                  {
-        //                      Method = req.Method,
-        //                      url = req.url
-        //                  }
-        //                  ).ToList();
-
-
-        //    HttpResponseMessage response = null;
-        //    if (harreq == null)
-        //    {
-        //        throw new HttpResponseException(HttpStatusCode.NotFound);
-        //    }
-
-        //    return harreq;
-
-        //}
-
 
     }
 }

@@ -16,6 +16,6 @@ namespace HarWAPI.Models
         bool Update(HarEntity item);
 
         HarEntity Add(string source);
-        //IEnumerable<request> GetRequests(int id);
+        IEnumerable<request> GetRequests(int id);
     }
 }

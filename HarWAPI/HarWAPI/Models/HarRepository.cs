@@ -118,10 +118,10 @@ namespace HarWAPI.Models
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns></returns>
-        //public IEnumerable<request> GetRequests(int id)
-        //{
-        //    return harobjects.Find(p => p.Id == id).log.entries.Select(a => a.request);
-        //}
+        public IEnumerable<request> GetRequests(int id)
+        {
+            return harobjects.Find(p => p.Id == id).log.entries.Select(a => a.request);
+        }
 
 
     }

@@ -23,6 +23,49 @@ namespace HarWAPI.Tests
     [TestClass]
     public class WebApiTests
     {
+ 
+
+        [TestMethod]
+        public async Task GetRequestsPayloadTest()
+        {
+
+            string mappath = Utility.Utils.GetMapPath(@".\Resources\Sample1.har");
+
+            if (!string.IsNullOrEmpty(mappath))
+            {
+                var result = await Post(mappath);
+
+                using (var httpClient = new HttpClient())
+                {
+
+                    var requestUri = new Uri("http://localhost:49265/api/Requests/1");
+
+                    httpClient.BaseAddress = new Uri("http://localhost:49265/");
+                    httpClient.DefaultRequestHeaders.Accept.Clear();
+                    httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+
+                    HttpResponseMessage response = await httpClient.GetAsync(requestUri);
+
+                    Requests reqent = null;
+                    if (response.IsSuccessStatusCode)
+                    {
+
+                        reqent = await response.Content.ReadAsAsync<Requests>();
+
+                    }
+
+                    // Assert
+                    Assert.IsNotNull(reqent);
+                    Assert.AreEqual(12, reqent.requests.Count());
+
+                }
+            }
+            else
+            {
+                Assert.Fail();
+            }
+        }
 
         [TestMethod]
         public async Task Get()
@@ -198,8 +241,6 @@ namespace HarWAPI.Tests
                 Assert.Fail();
             }
         }
-
-
 
         private async Task<HttpResponseMessage> Post(string mappath)
         {

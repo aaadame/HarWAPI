@@ -121,7 +121,7 @@
     <Compile Include="Controllers\HarControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
-    <Compile Include="Controllers\ValuesControllerTest.cs" />
+    <Compile Include="Controllers\RequestsControllerTest.cs" />
     <Compile Include="HttpUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>

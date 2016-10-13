@@ -31,7 +31,7 @@ namespace HarWAPI.Tests.Controllers
 
 
         //[TestMethod]
-        //public async Task Get()
+        //public  Get()
         //{
 
         //    // Arrange
@@ -113,7 +113,7 @@ namespace HarWAPI.Tests.Controllers
         //            controller.Post(harObj1);
 
         //            // Act
-        //            Har harent = controller.Get(2);
+        //            HarEntity harent = controller.Get(2);
 
         //            // Assert
         //            Assert.IsNotNull(harent);
@@ -271,7 +271,7 @@ namespace HarWAPI.Tests.Controllers
         //        controller.Post(harObj);
 
         //        // Act
-        //        Har harent = controller.Get(1);
+        //        HarEntity harent = controller.Get(1);
 
         //        // Assert
         //        Assert.IsNotNull(harent);
