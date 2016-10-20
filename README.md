@@ -1,7 +1,7 @@
 # HarWAPI
-HTTP Archive RESTful in memory WepAPI Service
+HTTP Archive RESTful in memory Web Api Service
 
-Note, the WebApi is setup with "No Authentication" by design.
+Note, the Web Api is setup with "No Authentication" by design.
 
 For more information on available authentication methods...
 
